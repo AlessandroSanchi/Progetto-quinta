@@ -72,6 +72,3 @@ Se vuoi resettare il database manualmente, rimuovi `instance/game.sqlite` e riav
 - Fornire un `Dockerfile` e `docker-compose.yml` per eseguire l'app in container
 - Aggiungere validazione e rate-limiting per le submission dei punteggi
 
-## Note finali
-
-Se vuoi, posso aggiungere uno script di inizializzazione del DB, un semplice `Dockerfile` o una piccola suite di test. Dimmi quale preferisci e procedo.
