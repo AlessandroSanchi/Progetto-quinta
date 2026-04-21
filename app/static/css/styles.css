@@ -259,10 +259,12 @@ button:hover {
   margin-bottom: 10px;
 }
 
-/* Container for Phaser-managed canvas. Keep it inline with the canvas and size it to the game's config. */
 #phaserGame {
-  position: relative;
-  width: 900px;
-  height: 700px;
-  margin-right: 14px; /* match space used by HUD */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  z-index: 1111;
 }

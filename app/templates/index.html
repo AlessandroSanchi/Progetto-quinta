@@ -20,7 +20,7 @@
     </div>
 
     <div class="center-area">
-      <div class="canvas-wrap">
+        <div class="canvas-wrap">
         <canvas id="gameCanvas" width="900" height="700"></canvas>
 
         <div class="hud">
@@ -44,12 +44,10 @@
     const CURRENT_USER = "{{ username }}";
   </script>
   <script>
-    // Prefer Phaser-based game by default (fallback to original canvas left out if missing).
-    // We set a global flag so `phaser_game.js` can decide to run.
+    // Always load Phaser and the Phaser-based game. The game will use the existing
+    // <canvas id="gameCanvas"> so the canvas position in the layout won't change.
     (function(){
-      const usePhaser = true; // prefer Phaser version
-      window.USE_PHASER = usePhaser;
-      // load Phaser then our phaser script
+      window.USE_PHASER = true;
       const s1 = document.createElement('script');
       s1.src = 'https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js';
       s1.onload = ()=>{
